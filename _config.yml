@@ -1,7 +1,7 @@
 # Site settings
 title: Thinky
 tagline: Ask Why?
-email: cbillowes@gmail.com
+email: thinkysocial@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   When we are young we ask a lot of questions. We should never stop.
 baseurl: "" # the subpath of your site, e.g. /blog/
