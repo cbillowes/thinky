@@ -188,17 +188,24 @@
     > li {
         margin-bottom: $spacing-unit;
     }
+
+    .post-meta {
+        font-size: $small-font-size;
+        color: $grey-color;
+    }
+
+    h1 {
+      font-size: 150%;
+      margin-bottom: 0em;
+    }
+
+    .post-link {
+        display: block;
+    }
+
 }
 
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
 
-.post-link {
-    display: block;
-    font-size: 24px;
-}
 
 
 
@@ -212,7 +219,8 @@
 .post-title {
     font-size: 42px;
     letter-spacing: -1px;
-    line-height: 1;
+    line-height: 1.5em;
+    margin-bottom: 0em;
 
     @include media-query($on-laptop) {
         font-size: 36px;
