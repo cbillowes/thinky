@@ -92,10 +92,10 @@ a {
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    border-left: 5px solid $brand-color;
+    padding: $spacing-unit / 2;
+    background-color: $grey-color-light;
     font-size: 18px;
-    letter-spacing: -1px;
     font-style: italic;
 
     > :last-child {
