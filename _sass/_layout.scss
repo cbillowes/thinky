@@ -27,6 +27,8 @@
             line-height: $base-line-height;
             background-color: $grey-color-light;
             padding: 10px 20px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
             border-radius: 3px;
 
             // Gaps between nav items, but not on the first one
