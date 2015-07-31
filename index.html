@@ -4,22 +4,9 @@ permalink: /
 ---
 
 <div class="home">
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <h1>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h1>
-        {% include post-meta.html %}
-        <p>
-          {{ post.excerpt | strip_html }}
-        </p>
-        <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% assign posts = site.posts %}
+  {% include post-list.html %}
+  {% assign posts = nil %}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
