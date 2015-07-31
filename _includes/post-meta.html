@@ -7,10 +7,10 @@
   <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
   {% if post.author %} • <span class="author">Posted by <a href="/author/{{ post.author | replace: ' ', '-' }}/">{{ post.author }}</a></span>{% endif %}
   {% if post.categories %}
-    <span class="categories">
+    • <span class="categories">
       {% assign categories = post.categories %}
       {% if categories.size > 0 %}
-        • Filed under
+        Filed under
         {% for category in categories %}
           <a href="/category/{{ category }}">{{ category | capitalize }}</a>{% if category != categories.last %},{% endif %}
         {% endfor %}
