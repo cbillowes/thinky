@@ -20,9 +20,10 @@ $grey-color-dark:             darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:               1600px;
-
 $on-palm:                     600px;
 $on-laptop:                   800px;
+
+$footer-background-color:     #111;
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
