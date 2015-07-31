@@ -14,6 +14,7 @@ layout: default
         <p>
           {{ post.excerpt | strip_html }}
         </p>
+        <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
       </li>
     {% endfor %}
   </ul>
