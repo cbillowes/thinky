@@ -2,29 +2,30 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-$base-font-family:            Arial, sans-serif;
-$base-font-size:              12.5pt;
-$small-font-size:             $base-font-size * 0.875;
-$base-line-height:            1.75em;
+$base-font-family:                  Arial, sans-serif;
+$base-font-size:                    12.5pt;
+$small-font-size:                   $base-font-size * 0.875;
+$base-line-height:                  1.75em;
 
-$spacing-unit:                1.75em;
+$spacing-unit:                      1.75em;
 
-$text-color:                  #454545;
-$background-color:            #fdfdfd;
-$brand-color:                 #5da213;
-$brand-color-light:           #abd373;
-$brand-color-compliment:      #d75630;
+$text-color:                        #454545;
+$background-color:                  #fdfdfd;
+$brand-color:                       #5da213;
+$brand-color-light:                 #abd373;
+$brand-color-compliment:            #b33915;
+$brand-color-compliment-light:      #d75630;
 
-$grey-color:                  #828282;
-$grey-color-light:            lighten($grey-color, 40%);
-$grey-color-dark:             darken($grey-color, 25%);
+$grey-color:                        #828282;
+$grey-color-light:                  lighten($grey-color, 40%);
+$grey-color-dark:                   darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:               1600px;
-$on-palm:                     600px;
-$on-laptop:                   800px;
+$content-width:                     1600px;
+$on-palm:                           600px;
+$on-laptop:                         800px;
 
-$footer-background-color:     #111;
+$footer-background-color:           #111;
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
