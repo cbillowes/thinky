@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+priority: 1
 ---
 
 The [premise](/blog/2015/06/14/what-is-all-this-thinky-business/) of this website is about the importance of asking questions. If you are working on a feature for a solution ask questions like:
