@@ -1,0 +1,17 @@
+{% assign categories = site.categories %}
+{% if categories.size > 0 %}
+<section class="categories">
+  <h1>Categories</h1>
+  {% for category in categories %}
+    {% assign posts = category[1] %}
+    {% for post in posts %}
+      {% if post.type == type %}
+        <li><a href="#{{ category[0] }}">{{ category[0] | capitalize }}</span></a></li>
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% assign posts = nil %}
+  {% endfor %}
+</section>
+{% endif %}
+{% assign categories = nil %}
