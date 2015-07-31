@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   When we are young we ask a lot of questions. We should never stop.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://thinky.co.za" # the base hostname & protocol for your site
-twitter_username: cbillowes
+twitter_username: ThinkySocial
 github_username:  cbillowes
 
 # Build settings
