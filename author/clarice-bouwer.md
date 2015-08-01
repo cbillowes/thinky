@@ -2,6 +2,7 @@
 layout: page
 title: About Clarice Bouwer
 permalink: /author/clarice-bouwer/
+priority: 5
 menu: hidden
 ---
 
