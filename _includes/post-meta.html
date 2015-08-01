@@ -5,7 +5,7 @@
 {% endif %}
 <p class="post-meta">
   <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-  {% if post.author %} • <span class="author">Posted by <a href="/author/{{ post.author | replace: ' ', '-' }}/">{{ post.author }}</a></span>{% endif %}
+  {% if post.author %} • <span class="author">Posted by <a href="/author/{{ post.author | replace: ' ', '-' | downcase }}/">{{ post.author }}</a></span>{% endif %}
   {% if post.categories %}
       {% assign categories = post.categories %}
       {% if categories.size > 0 %}
