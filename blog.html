@@ -6,7 +6,8 @@ priority: 3
 keywords: [blog]
 ---
 
-<div class="home">
+<div>
+  <h1>Blog</h1>
   {% assign type = "blog" %}
   {% assign posts = site.posts | where: "type", type %}
   {% include post-list.html %}
