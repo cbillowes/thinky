@@ -6,10 +6,9 @@ author: Clarice Bouwer
 categories: [SQL, Dynamic Script]
 type: code
 permalink: /code/2015/06/23/detecting-a-value-anywhere-in-a-sql-database
+keywords: [sql, meta data, finding value, database, sys, script]
 ---
-This is a post that I have ported from an old blog (Published on: Jul 24, 2012):
-
-Life is good when I can help someone out with a problem, their code, or finding a needle in a haystack (among other things of course). Thanks to the lovely catalog views jam-packed with all the descriptive goodness of metadata pertaining to any database available to my very own fingertips, I was able to help out – and life is good :)
+This is a post that I have ported from an old blog (Published on: Jul 24, 2012): Life is good when I can help someone out with a problem, their code, or finding a needle in a haystack (among other things of course). Thanks to the lovely catalog views jam-packed with all the descriptive goodness of metadata pertaining to any database available to my very own fingertips, I was able to help out – and life is good :)
 
 I needed to help a colleague find the table (and column) containing a specific value. About 6 years ago or so I was stuck with a similar need to such a script – I had a null value that broke my web application due to a third party tool not having the ability to fathom a null value. Trying to track down this null would be a tedious task and my understanding of SQL back then was shockingly non-existent. I had a database administrator as a boyfriend that passed on a script to me that I have long since then lost in the virtual realm of cyber storage. I understood the just of the script but never the inner workings – until I needed to find the needle in the haystack again not so long ago and I had to do it without his help. This is when the sys.* views and I become good friends.
 

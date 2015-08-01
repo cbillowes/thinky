@@ -5,9 +5,8 @@ date:   2015-06-14 20:00:00
 author: Clarice Bouwer
 type: blog
 permalink: /2015/06/14/what-is-all-this-thinky-business/
+keywords: [developing software, bigger picture, collaborate, origin, thinky]
 ---
-
-##A bit of personal history
 
 I’ve been developing software since 2005. My primary focus has been on web solutions. For most of my career I’ve worked for smaller companies and I usually worked alone. In 2014, everything changed when I entered the corporate world. I had to:
 
