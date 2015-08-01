@@ -3,7 +3,7 @@ layout: post
 title:  "Is your skill set out-dated?"
 date:   2015-06-19 20:00:00
 author: Clarice Bouwer
-categories: [People]
+categories: [Mistakes]
 type: blog
 permalink: /2015/06/19/is-your-skill-set-out-dated/
 keywords: [up skill, optimisation, share, mentor-ship, research, falling behind]

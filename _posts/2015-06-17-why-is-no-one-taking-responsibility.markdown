@@ -3,7 +3,7 @@ layout: post
 title:  "Why is no one taking responsibility?"
 date:   2015-06-17 20:00:00
 author: Clarice Bouwer
-categories: [Constraints, People, Process]
+categories: [Constraints]
 type: blog
 permalink: /2015/06/17/why-is-no-one-taking-responsibility/
 keywords: [responsibility, accountability, coaching, problem, culture, decisions]
