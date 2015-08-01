@@ -3,9 +3,9 @@ layout: post
 title:  "Why is no one taking responsibility?"
 date:   2015-06-17 20:00:00
 author: Clarice Bouwer
-categories: Constraints People Process
+categories: [Constraints, People, Process]
 type: blog
-permalink: /blog/2015/06/17/why-is-no-one-taking-responsibility/
+permalink: /2015/06/17/why-is-no-one-taking-responsibility/
 ---
 
 No team is perfect. No product or solution is perfect. No company is perfect. The best we can do is to aim for perfection and hit non-failure.

@@ -4,7 +4,7 @@ title:  "What is all this thinky business?"
 date:   2015-06-14 20:00:00
 author: Clarice Bouwer
 type: blog
-permalink: /blog/2015/06/14/what-is-all-this-thinky-business/
+permalink: /2015/06/14/what-is-all-this-thinky-business/
 ---
 
 ##A bit of personal history
