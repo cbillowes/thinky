@@ -113,7 +113,6 @@
     line-height: 1em;
     font-size: $small-font-size;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 
     .column {
@@ -185,7 +184,7 @@
   }
 
   p {
-    line-height: 1em;
+    line-height: 1.3em;
     font-size: $small-font-size;
 
     &.copyright {
