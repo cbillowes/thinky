@@ -4,7 +4,7 @@ title:  "Robots vs Humans"
 date:   2015-06-20 20:00:00
 author: Clarice Bouwer
 type: code
-categories: [Extensions]
+categories: [Tools]
 permalink: /code/2015/06/20/robots-vs-humans/
 keywords: [chrome, extension, humans.txt, robots.txt]
 ---
