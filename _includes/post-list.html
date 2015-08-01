@@ -1,9 +1,9 @@
 <ul class="post-list">
   {% for post in posts %}
     <li>
-      <h1>
+      <h2>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h1>
+      </h2>
       {% include post-meta.html %}
       <p>
         {{ post.excerpt | strip_html }}

@@ -1,7 +1,7 @@
 <section class="site-mega-footer">
   <div class="wrapper footer-columns">
     <div class="column column1">
-      <h1>Pages</h1>
+      <h2>Pages</h2>
       <nav>
         <ul>
           <li><a class="page-link {% if page.permalink == '/' %}active{% endif %}" href="/">Home</a></li>
@@ -15,7 +15,7 @@
       </nav>
     </div>
     <div class="column column2">
-      <h1>Blog</h1>
+      <h2>Blog</h2>
       <nav>
         <ul>
           {% assign posts = site.posts | where: "type", "blog" %}
@@ -29,7 +29,7 @@
       </nav>
     </div>
     <div class="column column3">
-      <h1>Code</h1>
+      <h2>Code</h2>
       <nav>
         <ul>
           {% assign posts = site.posts | where: "type", "code" %}
