@@ -1,6 +1,7 @@
 ---
 layout: feed
 type: feed
+sitemap: no
 ---
 {% assign posts = site.posts %}
 {% for post in posts limit:10 %}
