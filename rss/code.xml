@@ -1,0 +1,9 @@
+---
+layout: feed
+type: code
+---
+{% assign posts = site.posts | where: "type", page.type %}
+{% for post in posts limit:10 %}
+  {% include item.xml %}
+{% endfor %}
+{% assign posts = nil %}
