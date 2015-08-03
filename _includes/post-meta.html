@@ -11,7 +11,7 @@
       {% if categories.size > 0 %}
         • <span class="categories">Filed under
           {% for category in categories %}
-            <a href="/category/{{ category }}"> {{ category | capitalize }}</a>{% if category != categories.last %}, {% endif %}
+            <a href="/category/{{ category | downcase }}"> {{ category | capitalize }}</a>{% if category != categories.last %}, {% endif %}
           {% endfor %}
         </span>
       {% endif %}
