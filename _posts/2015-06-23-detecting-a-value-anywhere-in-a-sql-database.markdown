@@ -7,6 +7,7 @@ categories: [Databases]
 type: code
 permalink: /code/2015/06/23/detecting-a-value-anywhere-in-a-sql-database
 keywords: [sql, meta data, finding value, database, sys, script]
+tags: [t-sql]
 ---
 This is a post that I have ported from an old blog (Published on: Jul 24, 2012): Life is good when I can help someone out with a problem, their code, or finding a needle in a haystack (among other things of course). Thanks to the lovely catalog views jam-packed with all the descriptive goodness of metadata pertaining to any database available to my very own fingertips, I was able to help out – and life is good :)
 

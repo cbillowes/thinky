@@ -7,6 +7,7 @@ categories: [People]
 type: blog
 permalink: /2015/06/23/how-are-your-soft-skills/
 keywords: [up skill, optimisation, share, mentor-ship, research, falling behind]
+tag: [values, continuous improvement]
 ---
 
 Soft skills are essential when you need to work with people whether it be clients or in teams.

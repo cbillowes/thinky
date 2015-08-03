@@ -7,6 +7,7 @@ categories: [Constraints]
 type: blog
 permalink: /2015/06/17/why-is-no-one-taking-responsibility/
 keywords: [responsibility, accountability, coaching, problem, culture, decisions]
+tags: [values, accountability, culture]
 ---
 
 No team is perfect. No product or solution is perfect. No company is perfect. The best we can do is to aim for perfection and hit non-failure.

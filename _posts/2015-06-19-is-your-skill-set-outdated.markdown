@@ -7,6 +7,7 @@ categories: [Mistakes]
 type: blog
 permalink: /2015/06/19/is-your-skill-set-out-dated/
 keywords: [up skill, optimisation, share, mentor-ship, research, falling behind]
+tags: [skills, continuous improvement]
 ---
 
 In 2013 I realised how far I had fallen behind in the Software Development industry. There were buzz words flying around that I had never encountered before. A year later, I realised that many of those buzz words were of things that had existed for many years that could have made my life easier had I at least known about it.

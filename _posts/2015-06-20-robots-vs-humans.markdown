@@ -7,6 +7,7 @@ type: code
 categories: [Tools]
 permalink: /code/2015/06/20/robots-vs-humans/
 keywords: [chrome, extension, humans.txt, robots.txt]
+tags: [extensions]
 ---
 
 It’s not rocket science to quickly check the [robots.txt](http://www.robotstxt.org/) and [humans.txt](http://humanstxt.org/) for a website but for everything, there is a Chrome Extension.
