@@ -1,0 +1,57 @@
+---
+---
+.site-header {
+  border: none;
+  padding: 0px;
+
+  .site-nav {
+    display: none;
+  }
+
+}
+
+.site-mega-footer {
+  display: none;
+}
+
+.site-footer {
+  p {
+    &.copyright {
+      float: none;
+    }
+    &.powered-by {
+      text-align: left;
+    }
+  }
+}
+
+.post-title {
+  font-size: 20pt;
+}
+
+.post-content {
+  padding: 0px;
+
+  .addthis_sharing_toolbox {
+    display: none;
+  }
+
+  h2 {
+    font-size: 15pt;
+  }
+
+}
+
+.highlight {
+  pre {
+    overflow-x: hidden;
+
+    code {
+      width: 100%;
+
+      span {
+        white-space: normal;
+      }
+    }
+  }
+}
