@@ -6,7 +6,7 @@
     {% assign posts = category[1] %}
     {% for post in posts %}
       {% if post.type == type %}
-        <li><a href="#{{ category[0] }}">{{ category[0] | capitalize }}</span></a></li>
+        <li><a href="/category/{{ category[0] | downcase }}">{{ category[0] | capitalize }}</span></a></li>
         {% break %}
       {% endif %}
     {% endfor %}
