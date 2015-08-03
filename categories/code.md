@@ -1,7 +1,7 @@
 ---
 layout: posts-by-category
-permalink: /category/databases/
-title: Databases
+permalink: /category/code/
+title: Code
 menu: hidden
 filter: true
 ---

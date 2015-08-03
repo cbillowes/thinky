@@ -3,7 +3,7 @@ layout: post
 title:  "Detecting a value anywhere in a SQL database"
 date:   2015-06-23
 author: Clarice Bouwer
-categories: [Databases]
+categories: [Code]
 type: code
 permalink: /code/2015/06/23/detecting-a-value-anywhere-in-a-sql-database
 keywords: [sql, meta data, finding value, database, sys, script]
