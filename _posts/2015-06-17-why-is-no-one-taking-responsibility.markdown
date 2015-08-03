@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why is no one taking responsibility?"
-date:   2015-06-17 20:00:00
+date:   2015-06-17
 author: Clarice Bouwer
 categories: [Constraints]
 type: blog

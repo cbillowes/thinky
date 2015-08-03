@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Is your skill set out-dated?"
-date:   2015-06-19 20:00:00
+date:   2015-06-19
 author: Clarice Bouwer
 categories: [Mistakes]
 type: blog

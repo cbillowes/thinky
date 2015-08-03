@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How are your soft sills?"
-date:   2015-06-23 20:00:00
+date:   2015-06-23
 author: Clarice Bouwer
 categories: [People]
 type: blog

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Robots vs Humans"
-date:   2015-06-20 20:00:00
+date:   2015-06-20
 author: Clarice Bouwer
 type: code
 categories: [Tools]

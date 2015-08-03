@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Detecting a value anywhere in a SQL database"
-date:   2015-06-23 19:38:42
+date:   2015-06-23
 author: Clarice Bouwer
 categories: [Databases]
 type: code
