@@ -306,6 +306,10 @@
 .post-content {
   margin-bottom: $spacing-unit;
 
+  .addthis_sharing_toolbox {
+    height: 41px;
+  }
+
   h2 {
     font-size: 32px;
 
