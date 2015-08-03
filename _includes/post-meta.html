@@ -16,4 +16,14 @@
         </span>
       {% endif %}
   {% endif %}
+  {% if post.tags %}
+      {% assign tags = post.tags %}
+      {% if tags.size > 0 %}
+        • <span class="tags">Tags:
+          {% for tag in tags %}
+            <a href="/tag/{{ tag | downcase | replace: ' ' : '-' }}"> {{ tag | downcase }}</a>{% if tag != tags.last %}, {% endif %}
+          {% endfor %}
+        </span>
+      {% endif %}
+  {% endif %}
 </p>
