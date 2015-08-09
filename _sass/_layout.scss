@@ -347,6 +347,7 @@
       font-size: 18px;
     }
   }
+
 }
 
 .empty {
@@ -355,6 +356,39 @@
   border-radius: 5px;
   background-color: $brand-color-light;
   padding: $spacing-unit;
+}
+
+.form {
+
+  .field {
+    margin-bottom: $spacing-unit;
+
+    &.active {
+      label {
+        font-weight: bold;
+        color: $brand-color;
+      }
+
+      input, textarea {
+        border-color: $brand-color;
+      }
+    }
+
+    label {
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 0px 10px 5px;
+      font-size: 1.5em;
+      border: solid 1px darken($grey-color-light, 10%);
+      background-color: $grey-color-light;
+      border-radius: 3px;
+    }
+
+  }
+
 }
 
 .post-content, .content {
