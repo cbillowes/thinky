@@ -12,9 +12,25 @@ permalink: /:year/:month/:day/:title
 
 dir:
   tags: tag
+  categories: category
 
 tags:
   security: "Something interesting about security stuff."
+categories:
+  tools: >
+    There will always be constraints. We just need to find great ways to overcome them.
+    These posts aim to share some of my ideas on how overcome some constraints.
+  mistakes: >
+    We are human and we all make mistakes. We need to learn from these mistakes and share them with others.
+    These posts aim to share some of my mistakes and what I have learned from others.
+  people: >
+    Dealing with different types of people can be quite challenging.
+    Everyone has different thoughts, perspectives and insights.
+    Knowing how to work together, instead of against each other is key to success.
+    These posts aim to share some of my ideas on working with people.
+  process: >
+    Processes should enable and empower teams, not work against them.
+    Hopefully these posts will give you some ideas on how to keep optimising your process.
 
 # Build settings
 markdown: kramdown
