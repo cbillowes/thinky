@@ -3,13 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
+  <title>{{ site.title }}{% if page.title %} | {{ page.title | capitalize }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="{% for keyword in page.keywords %}{{ keyword }} {% endfor %}" />
 
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
-  <meta name="twitter:title" content="{{ site.title }}&nbsp; {% if page.title %} | {{ page.title }}{% endif %}"/>
+  <meta name="twitter:title" content="{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}"/>
   <meta name="twitter:site" content="@{{ site.twitter_username }}"/>
   <meta name="twitter:domain" content="{{ site.url }}"/>
   <meta name="twitter:image:src" content="{{ site.url }}/assets/bulb.png"/>
@@ -17,7 +17,7 @@
 
   <meta property="og:locale" content="en_GB" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ site.title }}&nbsp; {% if page.title %} | {{ page.title }}{% endif %}" />
+  <meta property="og:title" content="{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}" />
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:url" content="{{ site.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
