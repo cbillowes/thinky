@@ -25,12 +25,8 @@
   };
 
   Navigation.prototype.initialize = function() {
-    menu.addEventListener("click", changeState);
+    var eventRegister = new EventRegister();
+    eventRegister.add(menu, "click", changeState);
   };
 
 }());
-
-window.onload = function() {
-  var navigation = new Navigation();
-  navigation.initialize();
-};
