@@ -5,7 +5,6 @@ date:   2015-06-23
 author: Clarice Bouwer
 categories: [Code]
 type: code
-permalink: /code/2015/06/23/detecting-a-value-anywhere-in-a-sql-database
 keywords: [sql, meta data, finding value, database, sys, script]
 tags: [t-sql]
 ---

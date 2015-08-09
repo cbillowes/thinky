@@ -5,7 +5,6 @@ date:   2015-06-23
 author: Clarice Bouwer
 categories: [People]
 type: blog
-permalink: /2015/06/23/how-are-your-soft-skills/
 keywords: [soft skills, work with people, impact, interaction, continuous improvement]
 tag: [values, continuous improvement]
 ---

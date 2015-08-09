@@ -5,7 +5,6 @@ date:   2015-08-03
 author: Clarice Bouwer
 categories: [Code]
 type: code
-permalink: /2015/08/03/migrated-to-jekyll
 keywords: [WordPress, Jekyll, static site generator]
 ---
 

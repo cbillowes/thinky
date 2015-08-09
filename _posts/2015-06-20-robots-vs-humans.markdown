@@ -5,7 +5,6 @@ date:   2015-06-20
 author: Clarice Bouwer
 type: code
 categories: [Tools]
-permalink: /code/2015/06/20/robots-vs-humans/
 keywords: [chrome, extension, humans.txt, robots.txt]
 tags: [extensions]
 ---

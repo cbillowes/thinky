@@ -5,7 +5,6 @@ date:   2015-06-19
 author: Clarice Bouwer
 categories: [Mistakes]
 type: blog
-permalink: /2015/06/19/is-your-skill-set-out-dated/
 keywords: [up skill, optimisation, share, mentor-ship, research, falling behind]
 tags: [skills, continuous improvement]
 ---
