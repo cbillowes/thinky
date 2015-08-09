@@ -19,12 +19,7 @@
       <nav>
         <ul>
           {% assign posts = site.posts | where: "type", "blog" %}
-          {% for post in posts limit:5 %}
-            {% if post.title %}
-              <li><a class="{% if page.permalink == post.permalink %}active{% endif %}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-          {% assign posts = nil %}
+          {% include footer-post-items.html %}
         </ul>
       </nav>
     </div>
@@ -33,12 +28,7 @@
       <nav>
         <ul>
           {% assign posts = site.posts | where: "type", "code" %}
-          {% for post in posts limit:5 %}
-            {% if post.title %}
-              <li><a class="{% if page.permalink == post.permalink %}active{% endif %}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-          {% assign posts = nil %}
+          {% include footer-post-items.html %}
         </ul>
       </nav>
     </div>
