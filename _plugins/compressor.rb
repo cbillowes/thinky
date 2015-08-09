@@ -4,6 +4,7 @@
 #
 # By [mytharcher](https://github.com/mytharcher)
 # 2012-05-20
+# https://gist.github.com/mytharcher/2758691
 #
 # Updated by [nicoespeon](https://github.com/nicoespeon)
 # 2013-04-12
@@ -29,7 +30,10 @@ module Jekyll
   module Compressor
 
     def compress_html(content)
-      content.gsub(/(?>[^\S ]\s*|\s{2,})(?=(?:(?:[^<]++|<(?!\/?(?:textarea|pre)\b))*+)(?:<(?>textarea|pre)\b|\z))/ix, '')
+      content
+        .gsub(/(?>[^\S ]\s*|\s{2,})(?=(?:(?:[^<]++|<(?!\/?(?:textarea|pre|title)\b))*+)(?:<(?>textarea|pre|title)\b|\z))/ix, ' ')
+        .gsub(/\s{2,}/, ' ')
+        .gsub(/\n(?:textarea|pre)/, '')
     end
 
     # Really writing process
