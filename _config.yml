@@ -10,5 +10,11 @@ twitter_username: ThinkySocial
 github_username:  cbillowes
 permalink: /:year/:month/:day/:title
 
+dir:
+  tags: tag
+
+tags:
+  security: "Something interesting about security stuff."
+
 # Build settings
 markdown: kramdown
