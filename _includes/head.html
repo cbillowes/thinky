@@ -4,11 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ site.title }}{% if page.title %} | {{ page.title | capitalize }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.description | size > 0 %}
+    {% assign description = page.description %}
+  {% elsif page.excerpt | size > 0 %}
+    {% assign description = page.excerpt %}
+  {% else %}
+    {% assign description = site.description %}
+  {% endif %}
+  {% assign description = description | strip_html | strip_newlines | truncate: 160 %}
+  <meta name="description" content="{{ description }}">
   <meta name="keywords" content="{% for keyword in page.keywords %}{{ keyword }} {% endfor %}" />
 
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta name="twitter:description" content="{{ description }}"/>
   <meta name="twitter:title" content="{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}"/>
   <meta name="twitter:site" content="@{{ site.twitter_username }}"/>
   <meta name="twitter:domain" content="{{ site.url }}"/>
@@ -18,7 +26,7 @@
   <meta property="og:locale" content="en_GB" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}" />
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:description" content="{{ description }}" />
   <meta property="og:url" content="{{ site.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="article:publisher" content="@{{ site.twitter_username }}" />
@@ -29,5 +37,5 @@
   <link rel="stylesheet" href="{{ "/css/print.css" | prepend: site.baseurl }}" media="print">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/rss/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-
+  {% assign description = nil %}
 </head>
