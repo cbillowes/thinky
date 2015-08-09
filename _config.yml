@@ -14,8 +14,6 @@ dir:
   tags: tag
   categories: category
 
-tags:
-  security: "Something interesting about security stuff."
 categories:
   tools: >
     There will always be constraints. We just need to find great ways to overcome them.
