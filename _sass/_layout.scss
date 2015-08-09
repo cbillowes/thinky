@@ -356,3 +356,11 @@
   background-color: $brand-color-light;
   padding: $spacing-unit;
 }
+
+.post-content, .content {
+
+  a {
+    font-weight: 600;
+  }
+
+}
