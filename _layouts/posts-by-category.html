@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-<h1>Posts relating to {{ page.title }}</h1>
-{{ content }}
+<h1>Posts relating to {{ page.title | capitalize }}</h1>
+<p>{{ page.description }}</p>
 <ul class="post-list">
   {% assign has_category = false %}
-  {% assign current_category = page.title | downcase %}
   {% for post in site.posts %}
       {% for category in post.categories %}
-        {% if category == current_category %}
+        {% if category == page.category %}
           {% assign has_category = true %}
           <li>
             <h2>
@@ -28,5 +27,4 @@ layout: default
   <p class="empty">Sorry, you are out of luck. There are no posts for this category at the moment.</p>
 {% endif %}
 
-{% assign current_category = nil %}
 {% assign has_category = nil %}
