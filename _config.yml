@@ -8,6 +8,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://thinky.co.za" # the base hostname & protocol for your site
 twitter_username: ThinkySocial
 github_username:  cbillowes
+permalink: /:year/:month/:day/:title
 
 # Build settings
 markdown: kramdown
