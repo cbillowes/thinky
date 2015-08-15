@@ -152,12 +152,31 @@
           width: -webkit-calc(100% - (#{$spacing-unit} / 2));
           width:         calc(100% - (#{$spacing-unit} / 2));
         }
+
+        &.column4 {
+          a {
+            display: inline-block;
+            margin-right: $spacing-unit;
+          }
+        }
       }
 
       &.column4 {
         a {
           display: block;
-          line-height: $spacing-unit;
+          line-height: $spacing-unit * 1.25;
+
+          .icon {
+
+            > svg {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              padding-right: $spacing-unit * 0.25;
+            }
+          }
+
         }
       }
 
