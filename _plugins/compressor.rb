@@ -28,7 +28,6 @@ require 'packr'
 module Jekyll
 
   module Compressor
-
     def compress_html(content)
       content
         .gsub(/(?>[^\S ]\s*|\s{2,})(?=(?:(?:[^<]++|<(?!\/?(?:textarea|pre|title)\b))*+)(?:<(?>textarea|pre|title)\b|\z))/ix, ' ')
@@ -54,44 +53,35 @@ module Jekyll
         :shrink_vars => true
       ))
     end
-
   end
 
   # Overwrite old methods to insert a hook
   class Post
-
     include Compressor
 
     def write(dest)
       self.output_html(dest, self.output)
     end
-
   end
 
-
-
   class Page
-
     include Compressor
 
     def write(dest)
       self.output_html(dest, self.output)
     end
-
   end
 
   class StaticFile
-
     include Compressor
 
     def write(dest)
       dest_path = self.destination(dest)
-
       return false if File.exist?(dest_path) and !self.modified?
       @@mtimes[path] = mtime
 
       case File.extname(dest_path)
-      when '.html'
+        when '.html'
           self.output_html(dest_path, File.read(path))
         when '.js'
           self.output_js(dest_path, File.read(path))
@@ -99,10 +89,8 @@ module Jekyll
           FileUtils.mkdir_p(File.dirname(dest_path))
           FileUtils.cp(path, dest_path)
       end
-
       true
     end
-
   end
 
 end
