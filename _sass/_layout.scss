@@ -135,15 +135,30 @@
     .column {
       float: left;
       margin-bottom: $spacing-unit / 2;
-      padding-left: $spacing-unit / 2;
-      width: -webkit-calc(33% - (#{$spacing-unit} / 2));
-      width:         calc(33% - (#{$spacing-unit} / 2));
 
+      &.column1, &.column4 {
+        width: -webkit-calc(15% - (#{$spacing-unit} / 2));
+        width:         calc(15% - (#{$spacing-unit} / 2));
+      }
 
-      @include media-query($on-palm) {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+      &.column2, &.column3 {
+        width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+        width:         calc(35% - (#{$spacing-unit} / 2));
+      }
+
+      @include media-query($on-laptop) {
+        &.column1, &.column2, &.column3, &.column4 {
+          float: none;
+          width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+          width:         calc(100% - (#{$spacing-unit} / 2));
+        }
+      }
+
+      &.column4 {
+        a {
+          display: block;
+          line-height: $spacing-unit;
+        }
       }
 
       h1 {
@@ -374,6 +389,18 @@
       }
     }
 
+    &.invalid {
+      label {
+        font-weight: bold;
+        color: $brand-color-compliment;
+      }
+
+      input, textarea {
+        border-color: $brand-color-compliment;
+        background-color:$brand-color-compliment-light;
+      }
+    }
+
     label {
       display: block;
     }
@@ -385,6 +412,28 @@
       border: solid 1px darken($grey-color-light, 10%);
       background-color: $grey-color-light;
       border-radius: 3px;
+    }
+
+  }
+
+  .buttons {
+    input {
+      border: none;
+      color: $brand-color-light;
+      background-color: $brand-color;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      display: inline-block;
+      padding: 15px 20px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $brand-color-compliment;
+        background-color: $brand-color-compliment-light;
+        transition: all .5s;
+      }
     }
 
   }
