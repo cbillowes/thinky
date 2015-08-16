@@ -3,7 +3,7 @@ layout: page
 headingPrefix: Posts relating to
 ---
 <p>{{ page.description }}</p>
-<ul class="post-list">
+<ul class="posts">
   {% assign has_category = false %}
   {% for post in site.posts %}
       {% for category in post.categories %}
@@ -11,13 +11,13 @@ headingPrefix: Posts relating to
           {% assign has_category = true %}
           <li>
             <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
             {% include post-meta.html %}
             <p>
               {{ post.excerpt | strip_html }}
             </p>
-            <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+            <a class="more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
           </li>
         {% endif %}
       {% endfor %}

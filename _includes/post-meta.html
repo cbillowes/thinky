@@ -3,7 +3,7 @@
 {% else %}
   {% assign post = post %}
 {% endif %}
-<p class="post-meta">
+<p class="meta">
   <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
   {% if post.author %}<span> • </span><span class="author">Posted by <a href="/author/{{ post.author | replace: ' ', '-' | downcase }}/">{{ post.author }}</a></span>{% endif %}
   {% if post.categories %}

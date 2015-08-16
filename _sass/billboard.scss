@@ -14,7 +14,7 @@
   background-color: $brand-color;
   min-height: 300px;
 
-  .post-list {
+  .posts {
     position: relative;
 
     li {
@@ -33,7 +33,7 @@
         -webkit-animation-name: fadeInFromNone;
       }
 
-      .post-meta {
+      > .meta {
         position: absolute;
         top: 0px;
         left: 0px;
@@ -61,9 +61,10 @@
         a {
           font-weight: bold;
         }
-      }
 
-      .post-link {
+      } /* /.meta */
+
+      h2 > a {
         font-size: 200%;
         color: $background-color;
         margin-top:20px;
@@ -79,7 +80,7 @@
         overflow: hidden;
       }
 
-      .post-more {
+      > .more {
         margin-bottom:20px;
 
         &:hover {

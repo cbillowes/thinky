@@ -1,18 +1,22 @@
-<ul class="post-list">
+<ul class="posts">
+
   {% if limit == nil %}
     {% assign limit = 0 %}
   {% endif %}
+
   {% for post in posts limit:total %}
     <li>
       <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
       {% include post-meta.html %}
       <p>
         {{ post.excerpt | strip_html }}
       </p>
-      <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+      <a class="more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
     </li>
   {% endfor %}
+
   {% assign posts = nil %}
+
 </ul>

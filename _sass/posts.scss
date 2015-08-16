@@ -1,0 +1,55 @@
+/*
+ * Posts
+ */
+.posts {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+
+    > h2 {
+      margin-bottom: 0em;
+
+      a {
+        line-height: 1.5em;
+      }
+
+    } /* /.> h2 */
+
+    > .meta {
+      font-size: $small-font-size;
+      color: $grey-color;
+
+      .date {
+        padding-right: 5px;
+      }
+
+      .author, .categories {
+        padding: 0 5px;
+      }
+
+      .tags {
+        padding-left: 5px;
+      }
+
+    } /* /.> meta */
+
+    > .more {
+      background-color: $more-color-light;
+      color: $more-color-dark;
+      font-weight: normal;
+      @include border-radius(2px);
+      padding: 10px 20px;
+
+      &:hover {
+        color: $brand-color-light;
+        background-color: $brand-color;
+        transition: all .5s;
+      }
+
+    } /* /.more */
+
+  } /* /.> li */
+
+} /* /.posts */
