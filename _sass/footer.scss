@@ -1,0 +1,45 @@
+/**
+* Site footer
+*/
+.site-footer {
+  background-color: $footer-background-color;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit / 2;
+
+  code {
+    border-color: lighten($footer-background-color, 20%);
+    background-color: lighten($footer-background-color, 10%);
+    color: $grey-color;
+  }
+
+  p {
+    line-height: 1.3em;
+    font-size: $small-font-size;
+
+    &.copyright {
+      float: left;
+    }
+
+    &.powered-by {
+      text-align: right;
+    }
+
+  }
+
+  @include media-query($on-laptop) {
+    p {
+      line-height: $base-line-height;
+
+      &.copyright {
+        float: none;
+      }
+
+      &.powered-by {
+        text-align: left ;
+      }
+
+    }
+
+  }
+
+} /* .site-footer */

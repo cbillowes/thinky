@@ -1,0 +1,140 @@
+
+.subscribe {
+  line-height: 0px;
+  margin-left: 20px;
+
+  a {
+    font-weight: 600;
+  }
+
+}
+
+.billboard {
+  position: relative;
+  background-color: $brand-color;
+  min-height: 300px;
+
+  .post-list {
+    position: relative;
+
+    li {
+      text-align: center;
+      color: $background-color;
+      margin: 0px;
+      width: 100%;
+
+      &.hidden {
+        display: none;
+        opacity: 0;
+      }
+
+      &.selected {
+        -webkit-animation-duration: 0.50s;
+        -webkit-animation-name: fadeInFromNone;
+      }
+
+      .post-meta {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 5px 20px 5px 20px;
+        background-color: $brand-color-light;
+        color: $text-color;
+        border-radius: 0px 0px 5px 5px;
+
+        @include media-query($on-laptop) {
+          font-size: 80%;
+          line-height: 150%;
+
+          .author, .author + span,
+          .tags, .categories + span {
+            display: none;
+          }
+
+          &+ p {
+            height: 60px;
+            overflow: hidden;
+          }
+
+        }
+
+        a {
+          font-weight: bold;
+        }
+      }
+
+      .post-link {
+        font-size: 200%;
+        color: $background-color;
+        margin-top:20px;
+
+        @include media-query($on-palm) {
+          font-size: 110%;
+        }
+
+      }
+
+      p {
+        max-height: 87px;
+        overflow: hidden;
+      }
+
+      .post-more {
+        margin-bottom:20px;
+
+        &:hover {
+          color: $background-color;
+          background-color: $text-color;
+          transition: all .5s;
+        }
+
+      }
+
+    }
+
+  }
+
+  & + .post-selector {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+
+    &::selection {
+      background-color: $background-color;
+    }
+
+    span {
+      background-color: $brand-color;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &.selected {
+        background-color: $brand-color-compliment;
+      }
+
+    }
+
+  }
+
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block ;
+        opacity: 0;
+    }
+
+    100% {
+        display: block ;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,67 @@
+
+.form {
+
+  .field {
+    margin-bottom: $spacing-unit;
+
+    &.active {
+      label {
+        font-weight: bold;
+        color: $brand-color;
+      }
+
+      input, textarea {
+        border-color: $brand-color;
+      }
+    }
+
+    &.invalid {
+      label {
+        font-weight: bold;
+        color: $brand-color-compliment;
+      }
+
+      input, textarea {
+        border-color: $brand-color-compliment;
+        background-color:$brand-color-compliment-light;
+      }
+    }
+
+    label {
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 0px 10px 5px;
+      font-size: 1.5em;
+      border: solid 1px darken($grey-color-light, 10%);
+      background-color: $grey-color-light;
+      border-radius: 3px;
+    }
+
+  }
+
+  .buttons {
+    input {
+      border: none;
+      color: $brand-color-light;
+      background-color: $brand-color;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      display: inline-block;
+      padding: 15px 20px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $brand-color-compliment;
+        background-color: $brand-color-compliment-light;
+        transition: all .5s;
+      }
+    }
+
+  }
+
+}

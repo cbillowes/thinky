@@ -1,0 +1,116 @@
+.site-header {
+  border-top: 5px solid $brand-color;
+  border-bottom: 1px solid $grey-color-light;
+  min-height: 56px;
+  padding-top: $spacing-unit / 2;
+  position: relative;
+
+  .site-title {
+    width: 130px;
+    border: none;
+    float: left;
+  }
+
+  .site-nav {
+    float: right;
+    line-height: 56px;
+
+    .menu-icon {
+      display: none;
+    }
+
+    .page-link {
+      color: $text-color;
+      line-height: $base-line-height;
+      background-color: $grey-color-light;
+      padding: 10px 20px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+
+      // Gaps between nav items, but not on the first one
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: $brand-color-light;
+        background-color: $brand-color;
+        transition: all .5s;
+      }
+
+      &.active {
+        color: $brand-color-light;
+        background-color: $brand-color;
+
+        &:hover {
+          color: $brand-color-compliment-light;
+          background-color: $brand-color-compliment;
+        }
+
+      }
+    }
+
+    @include media-query($on-palm) {
+      top: 9px;
+      right: 30px;
+      background-color: $background-color;
+      border: 1px solid $grey-color-light;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      text-align: right;
+
+      .menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
+        text-align: center;
+
+        > svg {
+          width: 18px;
+          height: 15px;
+
+          path {
+            fill: $grey-color-dark;
+          }
+        }
+      }
+
+      .trigger {
+        clear: both;
+        display: none;
+      }
+
+      .triggered {
+        display: block;
+        padding-bottom: 5px;
+        position: absolute;
+        left: 0px;
+        top: 80px;
+        width: 100%;
+      }
+
+      .page-link {
+        display: block;
+        padding: 10px 20px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        border-bottom: solid 1px $brand-color-light;
+        text-align: left;
+
+        &:not(:first-child) {
+          margin-left: 0px;
+        }
+
+        &:first-child {
+          border-top: solid 1px $brand-color-light;
+        }
+      }
+    }
+  }
+}
