@@ -6,13 +6,11 @@ priority: 3
 keywords: [blog]
 ---
 
-<div>
-  {% assign type = "blog" %}
-  {% assign posts = site.posts | where: "type", type %}
-  {% include post-list.html %}
-  {% assign posts = nil %}
+{% assign type = "blog" %}
+{% assign posts = site.posts | where: "type", type %}
+{% include post-list.html %}
+{% assign posts = nil %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/" | prepend: site.baseurl }}rss/{{ type }}.xml">via RSS</a></p>
-  {% include categories.html %}
-  {% assign type = nil %}
-</div>
+<p class="rss-subscribe">subscribe <a href="{{ "/" | prepend: site.baseurl }}rss/{{ type }}.xml">via RSS</a></p>
+{% include categories.html %}
+{% assign type = nil %}
