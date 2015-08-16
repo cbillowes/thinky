@@ -3,12 +3,17 @@ layout: page
 headingPrefix: Posts relating to
 ---
 <p>{{ page.description }}</p>
+
 <ul class="posts">
+
   {% assign has_category = false %}
+
   {% for post in site.posts %}
       {% for category in post.categories %}
+
         {% if category == page.category %}
           {% assign has_category = true %}
+
           <li>
             <h2>
               <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -19,10 +24,14 @@ headingPrefix: Posts relating to
             </p>
             <a class="more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
           </li>
+
         {% endif %}
+
       {% endfor %}
   {% endfor %}
+
 </ul>
+
 {% if has_category == false %}
   <p class="empty">Sorry, you are out of luck. There are no posts for this category at the moment.</p>
 {% endif %}

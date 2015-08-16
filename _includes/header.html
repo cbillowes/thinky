@@ -19,18 +19,29 @@
         <a class="page-link {% if page.permalink == '/' %}active{% endif %}" href="/">Home</a>
         {% assign sorted_pages = site.pages | sort: "priority" %}
         {% assign page_type = page.type | capitalize %}
+
         {% for sorted_page in sorted_pages %}
+
           {% if sorted_page.title and sorted_page.menu != "hidden" %}
             {% assign is_active = false %}
+
             {% if page.permalink contains sorted_page.permalink %}
               {% assign is_active = true %}
             {% endif %}
+
             {% if sorted_page.title == page_type %}
               {% assign is_active = true %}
             {% endif %}
-            <a class="page-link {% if is_active == true %}active{% endif %}" href="{{ sorted_page.url | prepend: site.baseurl }}">{{ sorted_page.title }}</a>
+
+            <a
+              class="page-link {% if is_active == true %}active{% endif %}"
+              href="{{ sorted_page.url | prepend: site.baseurl }}">
+              {{ sorted_page.title }}
+            </a>
           {% endif %}
+
         {% endfor %}
+
         {% assign is_active = nil %}
       </div>
     </nav>

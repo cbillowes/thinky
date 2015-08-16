@@ -3,29 +3,64 @@
 {% else %}
   {% assign post = post %}
 {% endif %}
+
 <p class="meta">
-  <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-  {% if post.author %}<span> • </span><span class="author">Posted by <a href="/author/{{ post.author | replace: ' ', '-' | downcase }}/">{{ post.author }}</a></span>{% endif %}
+  <span class="date">
+    {{ post.date | date: "%B %-d, %Y" }}
+  </span>
+
+  {% if post.author %}
+    <span> • </span>
+    <span class="author">
+      Posted by
+      <a href="/author/{{ post.author | replace: ' ', '-' | downcase }}/">
+        {{ post.author }}
+      </a>
+    </span>
+  {% endif %}
+
   {% if post.categories %}
-      {% assign categories = post.categories %}
-      {% if categories.size > 0 %}
-        <span> • </span>
-        <span class="categories">Filed under
-          {% for category in categories %}
-            <a href="/category/{{ category | downcase }}"> {{ category | capitalize }}</a>{% if category != categories.last %}, {% endif %}
-          {% endfor %}
-        </span>
-      {% endif %}
+    {% assign categories = post.categories %}
+
+    {% if categories.size > 0 %}
+      <span> • </span>
+      <span class="categories">Filed under
+
+        {% for category in categories %}
+          <a href="/category/{{ category | downcase }}"> {{ category | capitalize }}</a>
+
+          {% if category != categories.last %}
+            ,
+          {% endif %}
+
+        {% endfor %}
+
+      </span>
+    {% endif %}
+
+    {% assign categories = nil %}
+
   {% endif %}
+
   {% if post.tags %}
-      {% assign tags = post.tags %}
-      {% if tags.size > 0 %}
-        <span> • </span>
-        <span class="tags">Tags:
-          {% for tag in tags %}
-            <a href="/tag/{{ tag | downcase | replace: ' ' : '-' }}"> {{ tag | capitalize }}</a>{% if tag != tags.last %}, {% endif %}
-          {% endfor %}
-        </span>
-      {% endif %}
+    {% assign tags = post.tags %}
+
+    {% if tags.size > 0 %}
+      <span> • </span>
+      <span class="tags">Tags:
+        {% for tag in tags %}
+          <a href="/tag/{{ tag | downcase | replace: ' ' : '-' }}"> {{ tag | capitalize }}</a>
+          {% if tag != tags.last %}
+            ,
+          {% endif %}
+
+        {% endfor %}
+
+      </span>
+    {% endif %}
+
+    {% assign tags = nil %}
+
   {% endif %}
+
 </p>

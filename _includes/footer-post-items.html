@@ -1,6 +1,16 @@
 {% for post in posts limit:5 %}
+
   {% if post.title %}
-    <li><a class="{% if post.title == page.title %}active{% endif %}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    <li>
+
+      <a
+        class="{% if post.title == page.title %}active{% endif %}"
+        href="{{ post.url | prepend: site.baseurl }}">
+        {{ post.title }}
+      </a>
+    </li>
   {% endif %}
+
 {% endfor %}
+
 {% assign posts = nil %}

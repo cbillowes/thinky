@@ -4,13 +4,40 @@
       <h2>Pages</h2>
       <nav>
         <ul>
-          <li><a class="page-link {% if page.permalink == '/' %}active{% endif %}" href="/">Home</a></li>
+          <li>
+            <a
+              class="page-link {% if page.permalink == '/' %}active{% endif %}"
+              href="/">
+              Home
+            </a>
+          </li>
+
           {% assign sorted_pages = site.pages | sort: "priority" %}
+
           {% for sorted_page in sorted_pages %}
+            {% assign has_same_type = false %}
+
             {% if sorted_page.title and sorted_page.menu != "hidden" %}
-              <li><a class="{% if page.permalink contains sorted_page.permalink %}active{% endif %}" href="{{ sorted_page.url | prepend: site.baseurl }}">{{ sorted_page.title }}</a></li>
+              {% assign sorted_page_type = sorted_page.title | downcase %}
+
+              {% if page.type == sorted_page_type %}
+                {% assign has_same_type = true %}
+              {% endif %}
+
+              <li>
+                <a
+                  class="{% if page.permalink contains sorted_page.permalink or has_same_type %}active{% endif %}"
+                  href="{{ sorted_page.url | prepend: site.baseurl }}">
+                  {{ sorted_page.title }}
+                </a>
+              </li>
+
             {% endif %}
+
           {% endfor %}
+
+          {% assign has_same_type = nil %}
+          {% assign sorted_pages = nil %}
         </ul>
       </nav>
     </div>
@@ -51,7 +78,7 @@
           <span class="icon">
             <svg viewBox="0 0 16 16">
               <path d="m0.26436,5.86906l15.08564,0l0,9.36l-15.08564,0l0,-9.36z" fill="#828282"/>
-              <path transform="rotate(-179.88052368164062 7.789976596832275,8.217334747314453) " id="svg_7" d="m0.26854,10.56734l7.52145,-4.7l7.52143,4.7z" fill="#3f3f3f"/>
+              <path transform="rotate(-179.88052368164062 7.789976596832275,8.217334747314453) " d="m0.26854,10.56734l7.52145,-4.7l7.52143,4.7z" fill="#3f3f3f"/>
               <path stroke-width="0" d="m0.22366,5.67914l7.52145,-4.7l7.52142,4.7z" fill="#828282"/>
               <path transform="rotate(90 4.010967731475829,10.548611640930178) " d="m-0.68952,14.25053l4.7005,-7.40384l4.70048,7.40384z" fill="#999"/>
               <path transform="rotate(-90 11.611561775207521,10.52731990814209) " d="m6.91108,14.22924l4.7005,-7.40384l4.70047,7.40384z" fill="#999"/>
@@ -85,6 +112,7 @@
     </div>
   </div>
 </section>
+
 <footer class="site-footer">
   <div class="wrapper">
     <p class="site">

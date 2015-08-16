@@ -3,7 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ site.title }}{% if page.title %} | {{ page.title | capitalize }}{% endif %}</title>
+  <title>
+    {{ site.title }}
+    {% if page.title %}
+      | {{ page.title | capitalize }}
+    {% endif %}
+  </title>
+
   {% if page.description | size > 0 %}
     {% assign description = page.description %}
   {% elsif page.excerpt | size > 0 %}
@@ -11,6 +17,7 @@
   {% else %}
     {% assign description = site.description %}
   {% endif %}
+
   {% assign description = description | strip_html | strip_newlines | truncate: 160 %}
   <meta name="description" content="{{ description }}">
   <meta name="keywords" content="{% for keyword in page.keywords %}{{ keyword }} {% endfor %}" />
@@ -37,5 +44,6 @@
   <link rel="stylesheet" href="{{ "/css/print.css" | prepend: site.baseurl }}" media="print">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/rss/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  
   {% assign description = nil %}
 </head>
