@@ -50,7 +50,7 @@ Indran ended the talk with the following striking words: **Act. Assess. Adjust.*
 
 ### Extra Resources
 
-- [](https://www.ironistic.com/the-cost-of-distractions-on-developers/) by Tom Lydon - **A must read!**
+- [The Cost of Distractions on Developers!](https://www.ironistic.com/the-cost-of-distractions-on-developers/) by Tom Lydon - **A must read!**
 - [10 Tips to Manage Your Scattered Brain](http://onewithnow.com/10-tips-to-manage-your-scattered-brain/) by Manal Ghoshain
 - [How to Stay Focused: Train Your Brain](http://www.entrepreneur.com/article/225321) by Nadia Goodman
 - [Why programmers work at night](http://swizec.com/blog/why-programmers-work-at-night/swizec/3198) by Swizec Teller - Funny read and you may pick up some focus tips in the comments.
