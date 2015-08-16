@@ -1,0 +1,17 @@
+.meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+
+  .date {
+    padding-right: 5px;
+  }
+
+  .author, .categories {
+    padding: 0 5px;
+  }
+
+  .tags {
+    padding-left: 5px;
+  }
+
+} /* /.> meta */
