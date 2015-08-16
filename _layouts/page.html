@@ -1,16 +1,18 @@
 ---
 layout: default
 ---
-<div class="page">
-  <div class="wrapper">
+<div class="wrapper">
 
-  <header>
-    <h1>{% if page.headingPrefix %}{{ page.headingPrefix }} {% endif %}{{ page.title | capitalize }}</h1>
-  </header>
+  <div class="page">
 
-  <article>
-    {{ content }}
-  </article>
+    <header>
+      <h1>{% if page.headingPrefix %}{{ page.headingPrefix }} {% endif %}{{ page.title | capitalize }}</h1>
+    </header>
+
+    <article>
+      {{ content }}
+    </article>
 
   </div>
+
 </div>
