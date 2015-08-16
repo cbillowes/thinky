@@ -6,7 +6,25 @@ menu: hidden
 keywords: [questions, encourage, software development]
 ---
 
-<div class="content">
+<div class="home">
+  <p class="subscribe wrapper">
+    Subscribe via RSS:
+    <a href="{{ "/rss/feed.xml" | prepend: site.baseurl }}">All</a> •
+    <a href="{{ "/rss/blog.xml" | prepend: site.baseurl }}">Blog</a> •
+    <a href="{{ "/rss/code.xml" | prepend: site.baseurl }}">Code</a>
+  </p>
+  <div class="billboard">
+    <div class="wrapper">
+      {% assign posts = site.posts %}
+      {% assign total = 6 %}
+      {% include post-list.html %}
+      {% assign total = nil %}
+      {% assign posts = nil %}
+    </div>
+  </div>
+  <div class="post-selector"></div>
+</div>
+<div class="wrapper">
   <h1>Ask Why?</h1>
   <p>
     The only constant in software development is change.
@@ -30,12 +48,99 @@ keywords: [questions, encourage, software development]
 
   <p>I encourage you to ask why more often.</p>
 </div>
+<script type="text/javascript">
+  (function() {
+    var posts = document.querySelectorAll(".billboard .post-list li");
+    var selectedPost = 0;
+    var interval;
+    var delay = 10000;
 
-<h2>Recent Activity</h1>
-{% assign posts = site.posts %}
-{% assign total = 3 %}
-{% include post-list.html %}
-{% assign total = nil %}
-{% assign posts = nil %}
+    createSelectors();
+    showPost(selectedPost);
+    //initializeScrolling();
+    //scrollingUserEvents();
 
-<p class="rss-subscribe">subscribe <a href="{{ "/rss/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    function initializeScrolling() {
+      interval = setInterval(function() {
+        selectedPost = selectedPost + 1;
+        if (selectedPost === posts.length) {
+          selectedPost = 0;
+        }
+        showPost(selectedPost);
+      }, delay);
+    }
+
+    function createSelectors() {
+      var postSelector = document.querySelector(".billboard + .post-selector");
+      for (var i = 0; i < posts.length; i++) {
+        var selector = document.createElement("span");
+        selector.dataset.position = i;
+        selector.addEventListener("click", selectPost);
+        postSelector.appendChild(selector);
+      }
+    }
+
+    function hideAllPosts() {
+      for (var i = 0; i < posts.length; i++) {
+        posts[i].className = "hidden";
+      }
+    }
+
+    function showPost(position) {
+      var selectors = document.querySelectorAll(".billboard + .post-selector > span");
+      var post = posts[position];
+
+      hideAllPosts();
+      for (var i = 0; i < selectors.length; i++) {
+        if (i === position) {
+          selectors[i].className = "selected";
+        } else {
+          selectors[i].className = "";
+        }
+      }
+      post.className = "selected";
+      setPostPadding(post);
+      selectedPost = position;
+    }
+
+    function setPostPadding(post) {
+      var containerHeight = getBillboardContainerHeight();
+      var postHeight;
+      post.style.paddingTop = 0 + "px";
+      postHeight = post.offsetHeight;
+      post.style.paddingTop = ((containerHeight - postHeight) / 2) + "px"
+    }
+
+    function getBillboardContainerHeight() {
+      var container = document.querySelector(".billboard");
+      return container.offsetHeight;
+    }
+
+    function selectPost() {
+      var position = parseInt(this.dataset["position"], 10);
+      showPost(position);
+    }
+
+    function scrollingUserEvents() {
+      for (var i = 0; i < posts.length; i++) {
+        posts[i].addEventListener("mouseover", function() {
+          clearInterval(interval);
+        });
+        posts[i].addEventListener("mouseout", function() {
+          initializeScrolling();
+        });
+      }
+    }
+
+    window.addEventListener("resize", function() {
+      for (var i = 0; i < posts.length; i++) {
+        posts[i].style.paddingTop = 0;
+        if (selectedPost === i) {
+          setPostPadding(posts[i]);
+        }
+      }
+      console.log("reset padding");
+    });
+
+  }());
+</script>
