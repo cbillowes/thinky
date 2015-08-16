@@ -6,9 +6,10 @@ priority: 5
 menu: hidden
 ---
 
+![alt text](/assets/authors/clarice-bouwer.png "Clarice Bouwer"){: .author }
 When I was 7 I remember watching a page being printed in colour with my older cousin. I asked her what she wanted to be when she grew up. She said a computer programmer and I promptly copied her answer. I became one.
 
-I was always intrigued by computers and what they could do. When the internet became popular I was hanging out on IRC and Yahoo Chat groups and taking apart websites to learn HTML. In high school I focused more on web design and front end development. I remember struggling with making forms do cool stuff like send e-mails and save to databases so I decided to go to CTI (Computer Training Institute - a college) to learn just how to do that. After college I had design, front-end and back end skills which was so freaking cool for me.
+I was always intrigued by computers and what they could do. When the internet became popular I was hanging out on IRC and Yahoo Chat groups and taking apart websites to learn HTML. In high school I focused more on web design and front end development. I remember struggling with making forms do cool stuff like send e-mails and save to databases so I decided to go to CTI (Computer Training Institute) to learn just how to do that. After college I had design, front-end and back end skills which was so freaking cool for me.
 
 I started my software development career in 2006. I have always used all my skills in my projects. Most of my career I was working alone or in really small teams of two with minimal dependencies.
 
@@ -20,4 +21,4 @@ This led me to this blog. I want to contribute to the development community. I w
 
 I hope you find value in what I have to share and encourage you to challenge me.
 
-@cbillowes: Code for fun and to pay the bills. Favourite colour is #cc0000. No really, it is. Compulsive re-tweeter.
+[@{{ site.author.twitter }}](https://twitter.com/{{ site.author.twitter }}): Code for fun and to pay the bills. Favourite colour is #cc0000. No really, it is. Compulsive re-tweeter.

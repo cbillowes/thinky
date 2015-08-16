@@ -8,6 +8,13 @@
     font-weight: 600;
   }
 
+  img.author {
+    float: left;
+    margin: 0px $spacing-unit $spacing-unit 0px;
+    border: solid 10px $brand-color;
+    @include border-radius(50%);
+  }
+
   .post {
 
     h1 {
