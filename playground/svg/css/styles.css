@@ -86,6 +86,10 @@ body {
   content:url("../img/close.svg");
 }
 
+#infoScreen h1 {
+  line-height: 150%;
+}
+
 #infoBtn > img {
   width: 30px;
 }
