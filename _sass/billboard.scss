@@ -1,10 +1,14 @@
 
 .subscribe {
-  line-height: 0px;
-  margin-left: 20px;
+  text-align: right;
+  margin: 0px;
 
   a {
     font-weight: 600;
+  }
+
+  @include media-query($on-palm) {
+    font-size: $small-font-size;
   }
 
 }

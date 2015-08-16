@@ -7,12 +7,16 @@ keywords: [questions, encourage, software development]
 ---
 
 <div class="home">
-  <p class="subscribe wrapper">
-    Subscribe via RSS:
-    <a href="{{ "/rss/feed.xml" | prepend: site.baseurl }}">All</a> •
-    <a href="{{ "/rss/blog.xml" | prepend: site.baseurl }}">Blog</a> •
-    <a href="{{ "/rss/code.xml" | prepend: site.baseurl }}">Code</a>
-  </p>
+
+  <div class="wrapper">
+    <section class="subscribe">
+        Subscribe via RSS:
+        <a href="{{ "/rss/feed.xml" | prepend: site.baseurl }}">All</a> •
+        <a href="{{ "/rss/blog.xml" | prepend: site.baseurl }}">Blog</a> •
+        <a href="{{ "/rss/code.xml" | prepend: site.baseurl }}">Code</a>
+    </section>
+  </div>
+
   <div class="billboard">
     <div class="wrapper">
       {% assign posts = site.posts %}
