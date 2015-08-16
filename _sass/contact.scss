@@ -37,7 +37,7 @@
       font-size: 1.5em;
       border: solid 1px darken($grey-color-light, 10%);
       background-color: $grey-color-light;
-      border-radius: 3px;
+      @include border-radius(3px);
     }
 
   }
@@ -47,9 +47,7 @@
       border: none;
       color: $brand-color-light;
       background-color: $brand-color;
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      border-radius: 2px;
+      @include border-radius(2px);
       display: inline-block;
       padding: 15px 20px;
       text-decoration: none;

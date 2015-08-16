@@ -36,6 +36,12 @@ $footer-background-color:           #111;
   border-radius: $radius;
 }
 
+@mixin border-radius-bottom($radius) {
+  -webkit-border-radius: 0px 0px $radius $radius;
+  -moz-border-radius: 0px 0px $radius $radius;
+  border-radius: 0px 0px $radius $radius;
+}
+
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {

@@ -40,7 +40,7 @@
         padding: 5px 20px 5px 20px;
         background-color: $brand-color-light;
         color: $text-color;
-        border-radius: 0px 0px 5px 5px;
+        @include border-radius-bottom(5px);
 
         @include media-query($on-laptop) {
           font-size: 80%;
@@ -108,7 +108,7 @@
       background-color: $brand-color;
       height: 20px;
       width: 20px;
-      border-radius: 50%;
+      @include border-radius(50%);
       display: inline-block;
       margin-right: 10px;
       cursor: pointer;
