@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Blog
 permalink: /blog/
 priority: 3
@@ -7,7 +7,6 @@ keywords: [blog]
 ---
 
 <div>
-  <h1>Blog</h1>
   {% assign type = "blog" %}
   {% assign posts = site.posts | where: "type", type %}
   {% include post-list.html %}

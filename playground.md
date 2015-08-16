@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: page
 title: Playground
 permalink: /playground/
 priority: 4
 keywords: [code, playground, showcase]
 ---
-#Playground
 
 ##SVG
 DStv Digital Media is running a development boot camp with different missions. One of them included an HTML5 webpage that changed themes based on the time of the day. I thought this was a great opportunity for me to play with SVG.
