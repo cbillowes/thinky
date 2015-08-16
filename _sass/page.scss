@@ -15,6 +15,30 @@
     @include border-radius(50%);
   }
 
+  section.categories {
+    margin-bottom: $spacing-unit;
+
+    h1 {
+      display: inline;
+    }
+
+    li {
+      display: inline;
+      margin: 0px;
+
+      a {
+        background-color: $brand-color;
+        color: $brand-color-light;
+        padding: 5px 10px;
+        @include border-radius(3px);
+        margin-right: 10px;
+        font-weight: normal;
+      }
+
+    }
+
+  }
+
   .post {
 
     h1 {

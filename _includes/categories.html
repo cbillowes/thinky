@@ -3,7 +3,8 @@
 {% if categories.size > 0 %}
 <section class="categories">
 
-  <h1>Categories</h1>
+  <h1>Browse by category</h1>
+  
   {% for category in categories %}
     {% assign posts = category[1] %}
 
@@ -20,7 +21,7 @@
       {% endif %}
 
     {% endfor %}
-    
+
     {% assign posts = nil %}
 
   {% endfor %}

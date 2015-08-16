@@ -1,16 +1,8 @@
 ---
-layout: page
+layout: post-listing
 title: Code
 permalink: /code/
 priority: 4
 keywords: [code]
+type: code
 ---
-
-{% assign type = "code" %}
-{% assign posts = site.posts | where: "type", type %}
-{% include post-list.html %}
-{% assign posts = nil %}
-
-<p class="rss-subscribe">subscribe <a href="{{ "/" | prepend: site.baseurl }}rss/{{ type }}.xml">via RSS</a></p>
-{% include categories.html %}
-{% assign type = nil %}

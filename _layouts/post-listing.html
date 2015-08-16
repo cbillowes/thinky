@@ -1,0 +1,17 @@
+---
+layout: page
+---
+<section class="subscribe">
+  Subscribe <a href="{{ "/" | prepend: site.baseurl }}rss/{{ page.type }}.xml">via RSS</a>
+</section>
+
+{% assign type = page.type %}
+{% include categories.html %}
+
+<section class="posts">
+  {% assign posts = site.posts | where: "type", page.type %}
+  {% include post-list.html %}
+  {% assign posts = nil %}
+</section>
+
+{% assign type = nil %}
