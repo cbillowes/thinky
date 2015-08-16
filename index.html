@@ -26,6 +26,7 @@ keywords: [questions, encourage, software development]
       {% assign posts = nil %}
     </div>
   </div>
+
   <div class="post-selector"></div>
 </div>
 
@@ -130,6 +131,8 @@ keywords: [questions, encourage, software development]
     function selectPost() {
       var position = parseInt(this.dataset["position"], 10);
       showPost(position);
+      clearInterval(interval);
+      initializeScrolling();
     }
 
     function scrollingUserEvents() {
