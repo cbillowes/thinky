@@ -23,7 +23,7 @@
         <span> • </span>
         <span class="tags">Tags:
           {% for tag in tags %}
-            <a href="/tag/{{ tag | downcase | replace: ' ' : '-' }}"> {{ tag | downcase }}</a>{% if tag != tags.last %}, {% endif %}
+            <a href="/tag/{{ tag | downcase | replace: ' ' : '-' }}"> {{ tag | capitalize }}</a>{% if tag != tags.last %}, {% endif %}
           {% endfor %}
         </span>
       {% endif %}
