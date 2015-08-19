@@ -18,7 +18,9 @@ Create a new Jekyll project:
 
 ## Build
 
-    cd \_build
+In the console in the project root folder:
+
+    cd _build
     jekyll-serve.bat
 
 A Jeykll server will be created and the site will be accessible via **http://localhost:4000**
