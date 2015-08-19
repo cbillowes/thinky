@@ -20,21 +20,21 @@
 
   .posts {
     position: relative;
+    display: inline;
 
     li {
       text-align: center;
       color: $background-color;
       margin: 0px;
       width: 100%;
-
-      &.hidden {
-        display: none;
-        opacity: 0;
-      }
+      display: none;
+      opacity: 0;
 
       &.selected {
-        -webkit-animation-duration: 0.50s;
-        -webkit-animation-name: fadeInFromNone;
+        $duration: 3s;
+        @include fadein-from-none($duration);
+        display: block;
+        opacity: 1;
       }
 
       > .meta {
@@ -125,21 +125,4 @@
 
   }
 
-}
-
-@-webkit-keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block ;
-        opacity: 0;
-    }
-
-    100% {
-        display: block ;
-        opacity: 1;
-    }
 }

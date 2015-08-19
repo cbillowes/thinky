@@ -30,17 +30,7 @@ $on-laptop:                         800px;
 
 $footer-background-color:           #111;
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
 
-@mixin border-radius-bottom($radius) {
-  -webkit-border-radius: 0px 0px $radius $radius;
-  -moz-border-radius: 0px 0px $radius $radius;
-  border-radius: 0px 0px $radius $radius;
-}
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
@@ -57,6 +47,8 @@ $footer-background-color:           #111;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+  "mixins",
+  "keyframes",
   "base",
   "layout",
   "syntax-highlighting"

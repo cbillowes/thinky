@@ -1,0 +1,37 @@
+@mixin fadein-from-none-keyframes() {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: block;
+      opacity: 0;
+  }
+
+  100% {
+      display: block;
+      opacity: 1;
+      border:solid 1px red;
+  }
+}
+
+@mixin fadein-from-none($duration) {
+  -webkit-animation: fadeinFromNone $duration; /* Safari 4+ */
+  -moz-animation:    fadeinFromNone $duration; /* Fx 5+ */
+  -o-animation:      fadeinFromNone $duration; /* Opera 12+ */
+  animation:         fadeinFromNone $duration; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes fadeinFromNone {
+  @include fadein-from-none-keyframes();
+}
+@-moz-keyframes fadeinFromNone {
+  @include fadein-from-none-keyframes();
+}
+@-o-keyframes fadeinFromNone {
+  @include fadein-from-none-keyframes();
+}
+@keyframes fadeinFromNone {
+  @include fadein-from-none-keyframes();
+}
