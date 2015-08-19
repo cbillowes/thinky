@@ -19,8 +19,21 @@ keywords: [questions, encourage, software development]
 
   <div class="billboard">
     <div class="wrapper">
+      <ul class="posts">
+        <li>
+          <h2>
+            <a href="/about/">“I know one thing: that I know nothing”</a>
+          </h2>
+          <p>
+            The world is filled with information and it is impossible to know everything.
+            We learn by asking questions.
+          </p>
+          <a class="more" href="/about/">About</a>
+          <a class="more" href="https://twitter.com/{{ site.twitter }}" target="_blank">Tweets</a>
+        </li>
+      </ul>
       {% assign posts = site.posts %}
-      {% assign total = 6 %}
+      {% assign total = 5 %}
       {% include post-list.html %}
       {% assign total = nil %}
       {% assign posts = nil %}
